@@ -1,4 +1,101 @@
-<p>Hello</p>
-<p>This is the online  website for CCST9003.</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Raymond's Website</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: swipeUp 0.8s ease-in-out;
+    }
+    
+    h1 {
+      font-size: 5vw;
+      animation: colorChange 5s linear infinite;
+    }
 
-<a href="CV.pdf" donwload>Click here to download the CV</a>
+    p {
+      font-size: 1.5vw;
+    }
+
+    @keyframes swipeUp {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes colorChange {
+      0% {
+        color: #FFD700;
+      }
+      25% {
+        color: #FFA500;
+      }
+      50% {
+        color: #FF6347;
+      }
+      75% {
+        color: #FFA500;
+      }
+      100% {
+        color: #FFD700;
+      }
+    }
+
+    img {
+      width: 20vw;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .location {
+      font-size: 1.5vw;
+    }
+
+    .message {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .download-button {
+      display: inline-block;
+      padding: 15px 30px; /* Adjust the padding values to increase or decrease button size */
+      font-size: 30px; /* Adjust the font size to increase or decrease button size */
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="home-bg.PNG" alt="My Image">
+    <div class="location">📍Newcastle upon Tyne, UK</div>
+    <div class="message">
+      <h1>Hello, I am Raymond.</h1>
+      <p>A new website is currently under development to create a fascinating way to introduce myself.</p>
+      <p>In the meantime, please download my CV by clicking the button below.</p>
+      <a href="CV.pdf" download class="download-button">Click here to download my CV</a>
+    </div>
+  </div>
+</body>
+</html>
