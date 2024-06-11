@@ -1,0 +1,27 @@
+  .landing-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    z-index: 10;
+    transition: background-color 2s ease;
+  }
+  
+  .landing-page video {
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .landing-page.transition {
+    background-color: #fff;
+  }
+  
+  .landing-page.transition video {
+    display: none;
+  }
+  

@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import About from './components/About';
+import Projects from './components/Projects';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
+import LandingPage from './components/LandingPage';
 import './App.css';
 
 function App() {
+  const [showMainContent, setShowMainContent] = useState(false);
+
+  const handleTransitionEnd = () => {
+    setShowMainContent(true);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!showMainContent && <LandingPage onTransitionEnd={handleTransitionEnd} />}
+      {showMainContent && (
+        <>
+          <Header />
+          <main>
+            <About />
+            <Projects />
+            <Resume />
+          </main>
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

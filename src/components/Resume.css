@@ -1,0 +1,24 @@
+  .pdf-container {
+    position: relative;
+    width: 93vh;
+    height: 36vw;
+    padding-top: 60%;
+    overflow: hidden;
+  }
+  
+  .pdf-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 100vh) {
+    .pdf-container {
+      width: 92vw;
+    }
+  }
+  
