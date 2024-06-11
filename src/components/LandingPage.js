@@ -17,7 +17,7 @@ const LandingPage = ({ onTransitionEnd }) => {
   return (
     <div className={`landing-page ${transition ? 'transition' : ''}`}>
       {!transition && (
-        <video id="signature" autoPlay muted>
+        <video id="signature" autoPlay muted playsInline>
           <source src="/Signature.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
